@@ -5,16 +5,18 @@
 # Copyright (C) 2019 KFERMercer <KFER.Mercer@gmail.com>
 # 
 # <https://github.com/KFERMercer/OpenWrt-CI>
-# 1
+# 
 
 name: OpenWrt-CI
 
 on:
-  schedule:
-    - cron: 0 20 * * *
-   push:
-     branches: 
-       - master
+  push:
+    branches: 
+      - master
+  # schedule:
+  #   - cron: 0 20 * * *
+  # release:
+  #   types: [published]
 
 jobs:
   build:
